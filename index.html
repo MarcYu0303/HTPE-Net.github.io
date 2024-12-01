@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Here is the description.">
+  <meta name="keywords" content="Here is the key words">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trans-HADR</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/e/ec/Tsinghua_University_Logo.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Depth Restoration of Hand-Held Transparent Objects for Human-to-Robot Handover</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://github.com/MarcYu0303">Ran Yu</a><sup>1 *</sup>,</span>
+            <span class="author-block">
+              Haixin Yu</a><sup>1 *</sup>,
+            </span>
+              Shoujie Li</a><sup>1 *</sup>,
+            <span class="author-block">
+              Yan Huang</a><sup>1</sup>,
+            </span>
+              Ziwu Song</a><sup>1</sup>,
+            </span>
+              and <a href="https://ssr-group.net/">Wenbo Ding</a><sup>1 †</sup>
+          </div>
+            <p style="font-size: 15px;"><sup>*</sup>Indicates Equal Contribution; <sup>†</sup>Indicates Corresponding Authors.</p>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Tsinghua University</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2408.14997"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2408.14997"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://youtu.be/mXdyL8SoHpo?si=M0C847-mRa9kiD5G"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/MarcYu0303/Trans-HADR/tree/main"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="https://github.com/google/nerfies/releases/tag/0.1"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data (Comming Soon)</span>
+                  </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" autoplay muted loop playsinline height="50%">
+        <source src="./static/videos/teaser.mp4"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p style="font-size: 20px;">
+            Transparent objects are common in daily life, while their unique optical properties pose challenges for RGB-D cameras to capture accurate depth information. For assistant robots, accurately perceiving transparent objects held by humans is essential for effective human-robot interaction. This paper presents a <strong>H</strong>and-<strong>A</strong>ware <strong>D</strong>epth <strong>R</strong>estoration (<strong>HADR</strong>) method for hand-held transparent objects based on creating an implicit neural representation function from a single RGB-D image. The proposed method introduces the hand posture as an important guidance to leverage semantic and geometric information. To train and evaluate the proposed method, we create a high-fidelity synthetic dataset called <strong>TransHand-14K</strong> with a real-to-sim data generation scheme. Experiments show that our method has better performance and generalization ability compared with existing methods. We further develop a real-world human-to-robot handover system based on the proposed HADR method, indicating its application potential in human-robot interaction.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!--/ video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+           <iframe src="https://www.youtube.com/embed/mXdyL8SoHpo?si=M0C847-mRa9kiD5G"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-widescreen">
+    <!-- <h2 class="title is-3"><span class="dperact">Methdology</span></h2> -->
+    <div class="rows">
+      <h2 class="title is-3" style="margin-top: 25px; margin-bottom: 7px;"><span class="dperact">TransHand-14K Dataset</span></h2>
+      <div class="content has-text-justified">
+        <p style="font-size: 20px; margin-bottom: 20px;">
+          We create a high fidelity synthetic dataset named <strong>TransHand-14K</strong> using Blender. This dataset is used for the percpetion research of hand-held transparent objects.
+        </p>
+      <div class="image-row" style="display: flex; justify-content: center; align-items: flex-start; gap: 20px;">
+        <div class="content" style="display: flex; flex-direction: column; justify-content: flex-end; align-items: center; text-align: center; height: 350px;">
+            <img src="static/images/dataset_generation_method.png" class="interpolation-image" style="height: 350px; width: auto;" />
+            <p><strong style="font-size: 22px;">Dataset Generation Method.</strong></p>
+        </div>
+        <div class="content" style="display: flex; flex-direction: column; justify-content: flex-end; align-items: center; text-align: center; height: 350px;">
+            <img src="static/images/dataset_visualization.png" class="interpolation-image" style="height: 350px; width: auto;" />
+            <p><strong style="font-size: 22px;">Teaser of TransHand-14K.</strong></p>
+        </div>
+    </div>
+      
+    
+    
+  <div class="container is-max-widescreen">
+    <div class="rows">
+        <h2 class="title is-3" style="margin-top: 25px; margin-bottom: 7px;"><span class="dperact">Hand-Aware Depth Restoration Method</span></h2>
+        <p style="font-size: 20px; margin-bottom: 20px;">
+          We introduce a <strong>H</strong>and-<strong>A</strong>ware <strong>D</strong>epth <strong>R</strong>estoration (<strong>HADR</strong>) method for hand-held tranparent objects. (a) Ray and voxel features are generated from the RGB and corrupted point cloud. (b) We introduce hand pose as an additional guidance for depth restoration. (c) The terminated probability and position of each ray-voxel pair are predicted. The final restored depth is obtained by ray-wise maxpooling. 
+        </p>
+        <div class="content" style="text-align: center;">
+        <img src="static/images/method.png" class="interpolation-image" />
+        <p><strong style="font-size: 22px;">Overview of HADR.</strong></p>
+        </div>              
+    </div>
+  </div>
+
+  <div class="container is-max-widescreen">
+    <div class="rows">
+        <h2 class="title is-3" style="margin-top: 25px; margin-bottom: 7px;"><span class="dperact">Human-to-Robot Handover Pipeline</span></h2>
+        <p style="font-size: 20px; margin-bottom: 20px;">
+          We develop a <strong>handover pipeline for transparent objects</strong> based on the proposed HADR method. The whole handover process is divided into three stages: (1) Wait & Observe, (2) Approach & React, (3) Grasp & Retrieve.
+        </p>
+        <div class="content" style="text-align: center;">
+          <img src="static/images/handover_detailed.png" class="interpolation-image" style="width: 700px; height: auto;"/>
+          <p><strong style="font-size: 22px;">Overview of Proposed Handover Pipeline for Transparent Objects.</strong></p>
+        </div>              
+    </div>
+  </div>
+
+
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{yu2024depth,
+    title    =  {Depth Restoration of Hand-Held Transparent Objects for Human-to-Robot Handover},
+    author   =  {Yu, Ran and Yu, Haixin and Yan, Huang and Song, Ziwu and Li, Shoujie and Ding, Wenbo},
+    journal  =  {arXiv preprint arXiv:2408.14997},
+    year     =  {2024}
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="./static/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This means you are free to borrow the <a
+              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
+            we just ask that you link back to this page in the footer.
+            Please remember to remove the analytics code included in the header of the website which
+            you do not want on your website.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
